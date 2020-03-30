@@ -31,7 +31,7 @@ model(){
 points(){
 	unset tally
 	allpoints=()
-	logs=(`find ${logroot}/logs -type f -iname *.log` ${logroot}/log.txt)
+	logs=(`find ${logroot}/logs -type f -iname \*.txt` ${logroot}/log.txt)
 	for i in ${logs[@]}; do
 		allpoints+=(`process $i`)
 	done
